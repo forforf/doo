@@ -52,8 +52,6 @@ doo.inOrder(chain);
 
 When ran, the promises are ran in order, and each waiting on the previous to complete before starting.
 
-
-    doInOrder(chain);
     
 ### Nested Chains
 
@@ -88,8 +86,6 @@ Also, since `inOrder` returns a promise, you can capture the final output, or an
 
 In the current implementation interim results are discarded. My thinking is that it'd be better to have the task itself emit its results rather than having this framework do it. Maybe there's a use case for the framework to handle it, but I  haven't encountered one yet.
 
-
-    
 
 ### Looping
 
