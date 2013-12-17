@@ -13,9 +13,14 @@ The README has more lines than the source code. That's why there's no tests or p
 
 ### Chaining
 
-Say you have several asynchronous tasks you want to run with the following constraints:
-1) They have to be ran in order
+Given several asynchronous tasks to run with the following constraints:
+
+1) They have to be ran in order.
+
 2) Only one task should execute at a time. Or to say it another way, the next task cannot start until the previous task finishes.
+
+We can do the following with this framework:
+
 
 We'll simulate the asynchronous promise with a setTimeout:
 ```
@@ -25,13 +30,13 @@ function asyncPromise( ms ) {
   return deferred.promise;
 }
 ```
-We'll require the necessary libraries:
+and require the necessary libraries:
 ```
 var Q = require('q');
 var doo = require('./doo.js');
 ```
 
-First will create the chain of events wrapping each promise function in the `doo.next` wrapper
+Then create the chain of events wrapping each promise function in the `doo.next` wrapper
 ```
 var chain = [
   doo.next(asyncPromise, 3500),
