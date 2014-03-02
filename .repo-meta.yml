@@ -1,0 +1,11 @@
+progress:
+  stable:
+    roadmap: stable, but no initial release yet
+ratings:
+  stable: 8
+  useful: 6
+  caliber: 6
+  tidy: 8
+  tended: 8
+  tests: 2
+  unique: 4
